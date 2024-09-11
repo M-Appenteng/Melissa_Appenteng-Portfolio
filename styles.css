@@ -323,14 +323,25 @@ h2 {
   color: #F87060;
 }
 
-.contact-section p a {
+.contact-section p {
+  margin: 10px 0;
+}
+
+.contact-section a {
   color: #F87060;
   text-decoration: none;
   font-size: 18px;
 }
 
-.contact-section p a:hover {
+.contact-section a:hover {
   text-decoration: underline;
+}
+
+.contact-icon {
+  width: 24px; /* Adjust as needed */
+  height: 24px; /* Adjust as needed */
+  vertical-align: middle; /* Aligns the icon with the text */
+  margin-right: 8px; /* Space between icon and text */
 }
 
 /* Footer */
@@ -352,6 +363,7 @@ footer p {
     flex-direction: column;
     width: 100%;
     position: absolute;
+    top: 60px; /* Adjust based on navbar height
     top: 60px; /* Adjust based on navbar height */
     left: 0;
     background-color: #102542;
@@ -371,13 +383,13 @@ footer p {
   }
 
   .projects-grid, .skills-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Single column layout on small screens */
   }
 }
 
 /* Button styles */
 .btn {
-  background-color: #F87060;  /* Background color for buttons */
+  background-color: #F87060; /* Background color for buttons */
   color: #FFFFFF;
   padding: 12px 25px;
   border-radius: 5px;
@@ -389,22 +401,22 @@ footer p {
 }
 
 .btn:hover {
-  background-color: #B3A394;  /* Hover state for buttons */
+  background-color: #B3A394; /* Hover state for buttons */
 }
 
 /* Learn More button styles */
 #learnMoreBtn {
   background: none;
   border: none;
-  color: #F87060;  /* Matches the background color of buttons */
-  font-size: 0.75em;  /* 0.75x the size of the paragraph above */
+  color: #F87060; /* Matches the background color of buttons */
+  font-size: 0.75em; /* 0.75x the size of the paragraph above */
   cursor: pointer;
-  text-decoration: none;  /* Removes the underline */
+  text-decoration: none; /* Removes the underline */
   display: block;
-  margin: 20px auto;  /* Centers the button horizontally with top margin */
+  margin: 20px auto; /* Centers the button horizontally with top margin */
   transition: color 0.3s;
 }
 
 #learnMoreBtn:hover {
-  color: #B3A394;  /* Changes color on hover */
+  color: #B3A394; /* Changes color on hover */
 }
