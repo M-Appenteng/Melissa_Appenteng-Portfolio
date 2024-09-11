@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Smooth Scrolling for Navigation Links
   const links = document.querySelectorAll('.nav-links a');
-
   links.forEach(link => {
     link.addEventListener('click', (event) => {
       event.preventDefault();
@@ -41,13 +40,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Project Item Click Effect
   const projectItems = document.querySelectorAll('.project-item');
   const overlay = document.createElement('div');
-
   overlay.classList.add('project-overlay');
   document.body.appendChild(overlay);
 
   projectItems.forEach(item => {
     const projectDate = item.querySelector('.project-date');
-
+    
     item.addEventListener('mouseover', () => {
       projectDate.style.display = 'inline';  // Show project date on hover
     });
@@ -76,4 +74,65 @@ document.addEventListener('DOMContentLoaded', () => {
     // Hide the overlay
     overlay.classList.remove('active');
   });
+
+  // JavaScript for "Learn More" functionality
+  const learnMoreBtn = document.getElementById('learnMoreBtn');
+  learnMoreBtn.addEventListener('click', () => {
+    const fullText = document.getElementById('fullText');
+    const summary = document.getElementById('summary');
+    
+    if (fullText.style.display === 'none') {
+      fullText.style.display = 'block';
+      summary.style.display = 'none';
+      learnMoreBtn.textContent = 'Summarize';  // Change to "Summarize"
+    } else {
+      fullText.style.display = 'none';
+      summary.style.display = 'block';
+      learnMoreBtn.textContent = 'Learn More';  // Change back to "Learn More"
+    }
+  });
+
+  // JavaScript for Skills Modal
+  const skillItems = document.querySelectorAll('.skill-item');
+  const skillModal = document.getElementById('skillModal');
+  const skillTitle = document.getElementById('skillTitle');
+  const skillDescription = document.getElementById('skillDescription');
+  const closeBtn = document.querySelector('.modal .close-btn');
+
+  skillItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const skillName = item.getAttribute('data-skill');
+      skillTitle.textContent = skillName;
+      skillDescription.textContent = getSkillDescription(skillName);
+      skillModal.style.display = 'block';
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    skillModal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (event) => {
+    if (event.target === skillModal) {
+      skillModal.style.display = 'none';
+    }
+  });
+
+  function getSkillDescription(skill) {
+    const descriptions = {
+      'CSS': 'Cascading Style Sheets, used for styling web pages.',
+      'HTML5': 'Hypertext Markup Language, the standard for structuring web pages.',
+      'Python': 'A versatile programming language used in various domains.',
+      'Tableau': 'A data visualization tool that helps in creating interactive dashboards.',
+      'PHP': 'A server-side scripting language used for web development.',
+      'MySQL': 'A relational database management system.',
+      'VB.NET': 'A multi-paradigm programming language developed by Microsoft.',
+      'C++': 'A general-purpose programming language known for its performance and efficiency.',
+      'Java': 'A high-level programming language used for building platform-independent applications.',
+      'JavaScript': 'A scripting language used to create interactive effects within web browsers.',
+      'Google Suite': 'A collection of cloud computing, productivity, and collaboration tools.',
+      'Office 365': 'A suite of productivity tools from Microsoft including Word, Excel, and Outlook.'
+    };
+    return descriptions[skill] || 'Description not available.';
+  }
 });
