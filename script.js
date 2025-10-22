@@ -1,138 +1,166 @@
-// Mobile Navigation Toggle
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
+  const navLinks   = document.querySelector('.nav-links');
 
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    menuToggle.classList.toggle('active');
-  });
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
 
-  // Smooth Scrolling for Navigation Links
-  const links = document.querySelectorAll('.nav-links a');
-  links.forEach(link => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-      const targetId = link.getAttribute('href').substring(1);
-      const targetSection = document.getElementById(targetId);
+    const links = document.querySelectorAll('.nav-links a');
+    links.forEach(link => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const targetId      = link.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (!targetSection) return;
 
-      window.scrollTo({
-        top: targetSection.offsetTop - 60,  // Adjust for the navbar height
-        behavior: 'smooth'
+        window.scrollTo({
+          top: targetSection.offsetTop - 60,
+          behavior: 'smooth'
+        });
+
+        if (navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+          menuToggle.classList.remove('active');
+        }
       });
-
-      // Close the mobile menu after a link is clicked
-      if (navLinks.classList.contains('active')) {
+    });
+    
+    document.addEventListener('click', (event) => {
+      if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
         navLinks.classList.remove('active');
         menuToggle.classList.remove('active');
       }
     });
-  });
+  }
 
-  // Close the mobile menu if the user clicks outside of it
-  document.addEventListener('click', (event) => {
-    if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
-      navLinks.classList.remove('active');
-      menuToggle.classList.remove('active');
-    }
-  });
-
-  // Project Item Click Effect
   const projectItems = document.querySelectorAll('.project-item');
+  
   const overlay = document.createElement('div');
   overlay.classList.add('project-overlay');
   document.body.appendChild(overlay);
 
+  function closeExpanded() {
+    projectItems.forEach(i => i.classList.remove('active'));
+    overlay.classList.remove('active');
+    document.body.classList.remove('no-scroll');
+  }
+
   projectItems.forEach(item => {
-    const projectDate = item.querySelector('.project-date');
-    
-    item.addEventListener('mouseover', () => {
-      projectDate.style.display = 'inline';  // Show project date on hover
-    });
-
-    item.addEventListener('mouseout', () => {
-      projectDate.style.display = 'none';  // Hide project date when not hovering
-    });
-
-    item.addEventListener('click', (event) => {
-      event.stopPropagation();  // Prevent click event from bubbling up to the document
-
-      // Remove 'active' class from all items
+    item.addEventListener('click', (e) => {
+      e.stopPropagation();
       projectItems.forEach(i => i.classList.remove('active'));
-
-      // Add 'active' class to the clicked item and show the overlay
       item.classList.add('active');
       overlay.classList.add('active');
+      document.body.classList.add('no-scroll');
     });
   });
-
-  // Click event to close the project item and hide the overlay
-  overlay.addEventListener('click', () => {
-    // Remove 'active' class from all items
-    projectItems.forEach(i => i.classList.remove('active'));
-
-    // Hide the overlay
-    overlay.classList.remove('active');
+  
+  overlay.addEventListener('click', closeExpanded);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeExpanded();
+  });
+  document.addEventListener('click', (e) => {
+    if (overlay.classList.contains('active') && !e.target.closest('.project-item')) {
+      closeExpanded();
+    }
   });
 
-  // JavaScript for "Learn More" functionality
   const learnMoreBtn = document.getElementById('learnMoreBtn');
-  learnMoreBtn.addEventListener('click', () => {
-    const fullText = document.getElementById('fullText');
-    const summary = document.getElementById('summary');
-    
-    if (fullText.style.display === 'none') {
-      fullText.style.display = 'block';
-      summary.style.display = 'none';
-      learnMoreBtn.textContent = 'Summarize';  // Change to "Summarize"
-    } else {
-      fullText.style.display = 'none';
-      summary.style.display = 'block';
-      learnMoreBtn.textContent = 'Learn More';  // Change back to "Learn More"
-    }
-  });
+  const fullText     = document.getElementById('fullText');
+  const summary      = document.getElementById('summary');
 
-  // JavaScript for Skills Modal
-  const skillItems = document.querySelectorAll('.skill-item');
-  const skillModal = document.getElementById('skillModal');
-  const skillTitle = document.getElementById('skillTitle');
-  const skillDescription = document.getElementById('skillDescription');
-  const closeBtn = document.querySelector('.modal .close-btn');
-
-  skillItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const skillName = item.getAttribute('data-skill');
-      skillTitle.textContent = skillName;
-      skillDescription.textContent = getSkillDescription(skillName);
-      skillModal.style.display = 'block';
+  if (learnMoreBtn && fullText && summary) {
+    learnMoreBtn.addEventListener('click', () => {
+      const expanded = fullText.style.display !== 'none';
+      if (expanded) {
+        fullText.style.display = 'none';
+        summary.style.display  = 'block';
+        learnMoreBtn.textContent = 'Learn More';
+      } else {
+        fullText.style.display = 'block';
+        summary.style.display  = 'none';
+        learnMoreBtn.textContent = 'Summarize';
+      }
     });
-  });
+  }
 
-  closeBtn.addEventListener('click', () => {
-    skillModal.style.display = 'none';
-  });
+  const skillItems       = document.querySelectorAll('.skill-item');
+  const skillModal       = document.getElementById('skillModal');
+  const skillTitle       = document.getElementById('skillTitle');
+  const skillDescription = document.getElementById('skillDescription');
+  const skillCloseBtn    = document.querySelector('#skillModal .close-btn');
 
-  window.addEventListener('click', (event) => {
-    if (event.target === skillModal) {
-      skillModal.style.display = 'none';
-    }
-  });
+  const descriptions = {
+    'CSS': 'Cascading Style Sheets, used for styling web pages.',
+    'HTML5': 'Hypertext Markup Language, the standard for structuring web pages.',
+    'Python': 'A versatile programming language used in various domains.',
+    'Tableau': 'A data visualization tool for interactive dashboards.',
+    'PHP': 'Server-side scripting language used for web development.',
+    'MySQL': 'A relational database management system.',
+    'VB.NET': 'A multi-paradigm language developed by Microsoft.',
+    'C++': 'A general-purpose language known for performance.',
+    'Java': 'A language for building platform-independent apps.',
+    'JavaScript': 'The language of the web for interactive UI.',
+    'Google Suite': 'Cloud productivity and collaboration tools.',
+    'Office 365': 'Microsoft productivity tools like Word/Excel/Outlook.'
+  };
 
   function getSkillDescription(skill) {
-    const descriptions = {
-      'CSS': 'Cascading Style Sheets, used for styling web pages.',
-      'HTML5': 'Hypertext Markup Language, the standard for structuring web pages.',
-      'Python': 'A versatile programming language used in various domains.',
-      'Tableau': 'A data visualization tool that helps in creating interactive dashboards.',
-      'PHP': 'A server-side scripting language used for web development.',
-      'MySQL': 'A relational database management system.',
-      'VB.NET': 'A multi-paradigm programming language developed by Microsoft.',
-      'C++': 'A general-purpose programming language known for its performance and efficiency.',
-      'Java': 'A high-level programming language used for building platform-independent applications.',
-      'JavaScript': 'A scripting language used to create interactive effects within web browsers.',
-      'Google Suite': 'A collection of cloud computing, productivity, and collaboration tools.',
-      'Office 365': 'A suite of productivity tools from Microsoft including Word, Excel, and Outlook.'
-    };
     return descriptions[skill] || 'Description not available.';
   }
+
+  if (skillModal && skillTitle && skillDescription) {
+    skillItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const skillName = item.getAttribute('data-skill');
+        skillTitle.textContent       = skillName;
+        skillDescription.textContent = getSkillDescription(skillName);
+        skillModal.style.display     = 'block';
+        document.body.classList.add('no-scroll');
+      });
+    });
+
+    if (skillCloseBtn) {
+      skillCloseBtn.addEventListener('click', () => {
+        skillModal.style.display = 'none';
+        document.body.classList.remove('no-scroll');
+      });
+    }
+
+    window.addEventListener('click', (event) => {
+      if (event.target === skillModal) {
+        skillModal.style.display = 'none';
+        document.body.classList.remove('no-scroll');
+      }
+    });
+  }
+
+  const imgModal     = document.getElementById("image-modal");
+  const imgModalImg  = document.getElementById("modal-img");
+  const melissaName  = document.getElementById("melissa-name");
+  const imgCloseBtn  = document.querySelector("#image-modal .close-btn");
+
+  if (melissaName && imgModal) {
+    melissaName.addEventListener("click", function () {
+      imgModal.style.display = "block";
+      document.body.classList.add('no-scroll');
+    });
+  }
+
+  if (imgCloseBtn) {
+    imgCloseBtn.addEventListener("click", function () {
+      imgModal.style.display = "none";
+      document.body.classList.remove('no-scroll');
+    });
+  }
+
+  window.addEventListener("click", function (e) {
+    if (e.target === imgModal) {
+      imgModal.style.display = "none";
+      document.body.classList.remove('no-scroll');
+    }
+  });
 });
