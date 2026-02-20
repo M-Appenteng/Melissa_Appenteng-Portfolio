@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks   = document.querySelector('.nav-links');
+  const navLinks = document.querySelector('.nav-links');
 
   if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', () => {
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     links.forEach(link => {
       link.addEventListener('click', (event) => {
         event.preventDefault();
-        const targetId      = link.getAttribute('href').substring(1);
+        const targetId = link.getAttribute('href').substring(1);
         const targetSection = document.getElementById(targetId);
         if (!targetSection) return;
 
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     });
-    
+
     document.addEventListener('click', (event) => {
       if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
         navLinks.classList.remove('active');
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const projectItems = document.querySelectorAll('.project-item');
-  
+
   const overlay = document.createElement('div');
   overlay.classList.add('project-overlay');
   document.body.appendChild(overlay);
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.classList.add('no-scroll');
     });
   });
-  
+
   overlay.addEventListener('click', closeExpanded);
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeExpanded();
@@ -69,43 +69,48 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const learnMoreBtn = document.getElementById('learnMoreBtn');
-  const fullText     = document.getElementById('fullText');
-  const summary      = document.getElementById('summary');
+  const fullText = document.getElementById('fullText');
+  const summary = document.getElementById('summary');
 
   if (learnMoreBtn && fullText && summary) {
     learnMoreBtn.addEventListener('click', () => {
       const expanded = fullText.style.display !== 'none';
       if (expanded) {
         fullText.style.display = 'none';
-        summary.style.display  = 'block';
+        summary.style.display = 'block';
         learnMoreBtn.textContent = 'Learn More';
       } else {
         fullText.style.display = 'block';
-        summary.style.display  = 'none';
+        summary.style.display = 'none';
         learnMoreBtn.textContent = 'Summarize';
       }
     });
   }
 
-  const skillItems       = document.querySelectorAll('.skill-item');
-  const skillModal       = document.getElementById('skillModal');
-  const skillTitle       = document.getElementById('skillTitle');
+  const skillItems = document.querySelectorAll('.skill-item');
+  const skillModal = document.getElementById('skillModal');
+  const skillTitle = document.getElementById('skillTitle');
   const skillDescription = document.getElementById('skillDescription');
-  const skillCloseBtn    = document.querySelector('#skillModal .close-btn');
+  const skillCloseBtn = document.querySelector('#skillModal .close-btn');
 
   const descriptions = {
-    'CSS': 'Cascading Style Sheets, used for styling web pages.',
-    'HTML5': 'Hypertext Markup Language, the standard for structuring web pages.',
-    'Python': 'A versatile programming language used in various domains.',
-    'Tableau': 'A data visualization tool for interactive dashboards.',
-    'PHP': 'Server-side scripting language used for web development.',
-    'MySQL': 'A relational database management system.',
-    'VB.NET': 'A multi-paradigm language developed by Microsoft.',
-    'C++': 'A general-purpose language known for performance.',
-    'Java': 'A language for building platform-independent apps.',
-    'JavaScript': 'The language of the web for interactive UI.',
-    'Google Suite': 'Cloud productivity and collaboration tools.',
-    'Office 365': 'Microsoft productivity tools like Word/Excel/Outlook.'
+    'CSS': 'Cascading Style Sheets, used for styling and responsive layout design.',
+    'HTML5': 'The standard markup language for structuring modern web applications.',
+    'Python': 'A versatile programming language used for scripting, automation, data analysis, and backend development.',
+    'Tableau': 'A data visualization tool used to create interactive dashboards and analytical reports.',
+    'PHP': 'A server-side scripting language commonly used for dynamic web development.',
+    'SQL': 'Structured Query Language used to query, manage, and manipulate relational databases.',
+    'VB.NET': 'A Microsoft-developed language used for building Windows applications and enterprise tools.',
+    'C++': 'A high-performance programming language used for systems programming and performance-critical applications.',
+    'Java': 'An object-oriented programming language used for cross-platform application development.',
+    'JavaScript': 'The primary language of the web used to create interactive and dynamic user interfaces.',
+    'Google Suite': 'Cloud-based productivity and collaboration tools including Docs, Sheets, and Drive.',
+    'Office 365': 'Microsoft productivity suite including Word, Excel, Outlook, and Teams.',
+    'Documentation and Assessment Support': 'Experience creating technical documentation, supporting audits, and assisting with enterprise-level system assessments.',
+    'Microsoft Access': 'A relational database management tool used for building and managing structured data applications.',
+    'Active Directory': 'Microsoft directory service used for user authentication, permissions management, and enterprise identity control.',
+    'Microsoft Azure': 'Microsoft’s cloud computing platform used for hosting applications, managing virtual machines, and cloud-based services.',
+    'C#': 'An object-oriented language developed by Microsoft for building applications within the .NET framework.'
   };
 
   function getSkillDescription(skill) {
@@ -116,9 +121,9 @@ document.addEventListener('DOMContentLoaded', () => {
     skillItems.forEach(item => {
       item.addEventListener('click', () => {
         const skillName = item.getAttribute('data-skill');
-        skillTitle.textContent       = skillName;
+        skillTitle.textContent = skillName;
         skillDescription.textContent = getSkillDescription(skillName);
-        skillModal.style.display     = 'block';
+        skillModal.style.display = 'block';
         document.body.classList.add('no-scroll');
       });
     });
@@ -138,10 +143,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const imgModal     = document.getElementById("image-modal");
-  const imgModalImg  = document.getElementById("modal-img");
-  const melissaName  = document.getElementById("melissa-name");
-  const imgCloseBtn  = document.querySelector("#image-modal .close-btn");
+  const imgModal = document.getElementById("image-modal");
+  const imgModalImg = document.getElementById("modal-img");
+  const melissaName = document.getElementById("melissa-name");
+  const imgCloseBtn = document.querySelector("#image-modal .close-btn");
 
   if (melissaName && imgModal) {
     melissaName.addEventListener("click", function () {
