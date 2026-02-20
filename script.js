@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (melissaName && imgModal) {
     melissaName.addEventListener("click", function () {
-      imgModal.style.display = "block";
+      imgModal.style.display = "flex";
       document.body.classList.add('no-scroll');
     });
   }
