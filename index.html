@@ -9,270 +9,305 @@
 </head>
 
 <body>
-
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="#" class="logo">Melissa Appenteng</a>
-      <div class="menu-toggle">☰</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Professional Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Home Section -->
-  <section id="home" class="hero-section">
-    <div class="container">
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo">Melissa Appenteng</a>
+        <div class="menu-toggle">☰</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#experience">Professional Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id="home" class="hero-section">
+      <div class="container">
         <h1>Hi! I'm <span id="melissa-name" class="hover-text">Melissa</span>.</h1>
         <p>Technical Support Specialist & Software Engineer</p>
         <br>
         <a href="#projects" class="btn">View My Work</a>
+      </div>
+    </section>
+    <div id="image-modal" class="modal">
+      <span class="close-btn">&times;</span>
+      <img class="modal-content" id="modal-img" src="linkedin_icon.png" alt="Melissa">
     </div>
-  </section>
-  <!-- Modal for the Image -->
-   <div id="image-modal" class="modal">
-    <span class="close-btn">&times;</span>
-    <img class="modal-content" id="modal-img" src="linkedin_icon.png" alt="Melissa">
-  </div>
-
-
-  <!-- About Section -->
-<section id="about" class="about-section">
-  <div class="container">
-    <h2>About Me</h2>
-    <p id="summary">
-      I am a <strong>Technical Support Specialist & Software Engineer</strong> with a passion for technology, problem-solving and continuous growth. 
-      My interest in technology began with my love for DC shows like <em>The Flash</em> and <em>Arrow</em>, Marvel movies like <em>Iron Man</em> and 
-      <em>Black Panther</em>, and investigative series like <em>Criminal Minds</em> and <em>NCIS</em>, while hands-on experience sparked my 
-      enthusiasm for <strong>web development and design</strong> as well as <strong>tech support</strong>. I enjoy creating functional, visually 
-      appealing web pages and aim to combine my skills in <strong>data analytics, cybersecurity, web development, and technical support</strong> to 
-      solve real-world challenges and continue expanding my knowledge in these fields.
-    </p>
-    <div id="fullText" style="display: none;">
-      <p>
-        I am a <strong>Technical Support Specialist & Software Engineer</strong> based in Buffalo, NY, with a passion 
-        for technology and a lifelong curiosity about how things work and how they can be improved. My interest in technology stems from 
-        my love for DC shows and Marvel movies, as well as my fascination with shows like Criminal Minds. That deepened my intrigue in cybersecurity 
-        and data analytics. I am also deeply interested in quantum physics and artificial intelligence and plan to expand my knowledge in 
-        all these subjects.
-      </p>
-      <br>
-      <p>
-        In addition to analytics and security, I have experience as a web developer and designer. Designing and structuring web pages is 
-        something I truly enjoy, as it allows me to combine creativity with functionality. I believe that while a visually appealing design 
-        captures attention, functionality is equally—if not more—important to the user experience. My interest in web development began during 
-        my undergraduate studies, where I gained hands-on experience in multiple courses. Since then, building interactive and efficient web 
-        pages has become a rewarding outlet for both my creative and technical skills.
-      </p>
-      <br>
-      <p>
-        Although a majority of my technical work experience is in technical support, I would love to expand my skill and knowledge in my other 
-        technological interests. My background in tech support has given me a strong foundation in troubleshooting, communication, and 
-        understanding user needs. Those are arguably skills that are invaluable across every area of technology. My time in support has allowed me 
-        to strengthen my problem-solving abilities, gain a deep understanding of IT infrastructure, and develop an analytical mindset that I plan to 
-        apply to my work in software engineering and cybersecurity. Moving forward, I aim to continue expanding my expertise in these areas by 
-        contributing to projects that merge creativity with technical precision, whether that’s designing smarter web applications, building web 
-        development templates, or enhancing digital security solutions. I see every opportunity as a chance to bridge the gap between user experience 
-        and innovation, and I’m committed to evolving as both a learner and a worker in the ever-growing tech landscape.
-      </p>
-      <br>
-      <p>
-        Beyond technology, I am a content creator on social media, where I share lifestyle, beauty, and fitness content. Occasionally, I post about 
-        food, movies, and TV shows, giving my audience a glimpse into different aspects of my life. I also have a strong love for the arts. Singing, 
-        acting, dancing, and theater have been significant parts of my life. I was actively involved in my middle school's theater club for all three 
-        years and participated in every talent show throughout middle school and high school. One of my most memorable experiences was being part of a 
-        summer program at Lincoln Center, where I auditioned and was accepted into the vocal music track. Though I had to choose between a math 
-        competition and pursuing music, it was a gamble that paid off, and I cherished the opportunity to hone my craft. As a student athlete, I 
-        competed in track and field during middle school and later participated in archery and stunt (cheerleading without the dancing) in high school. 
-      </p>
-      <br>
-      <p>
-        These activities taught me discipline, teamwork, and perseverance, which I carry with me in everything I do today. I have always been driven to 
-        challenge myself academically and explore different fields. Thanks to my father's encouragement, I was set up for success early in high school, 
-        taking advantage of CUNY's College Now program. During my high school years, I enrolled in numerous college courses, including business, 
-        journalism, media, criminal justice, personal finance, and an introductory computer science course. These experiences allowed me to explore a 
-        variety of career paths, and in my final year of high school, I realized that computer science was my true calling. Although the COVID-19 
-        pandemic made it difficult to continue my studies due to unreliable internet access, the knowledge I gained solidified my passion for technology. 
-        Today, I am focused on building a career that combines my love for technology with my interests in data analytics, cybersecurity, web development, 
-        and artificial intelligence.
-      </p>
-    </div>
-    <button id="learnMoreBtn" class="btn">Learn More</button>
-  </div>
-</section>
-
-  <!-- Education Section -->
-  <section id="education" class="education-section">
-    <div class="container">
-      <h2>Education</h2>
-      <ul>
-        <li>
-          <strong>Master of Science: Cybersecurity</strong><br>
-          <a href="https://www.qu.edu/" class="textlink">Quinnipiac University</a> - Hamden, CT <br>
-          <em>Expected May 2026</em> (On Leave)
-        </li>
-        <li>
-          <strong>Master of Science: Data Science & Analytics</strong><br>
-          <a href="https://suny.buffalostate.edu/" class="textlink">State University of New York, Buffalo State University</a> - Buffalo, NY <br>
-          <em>Expected May 2026</em> (On Leave)
-        </li>
-        <li>
-          <strong>Bachelor of Science: Computer Information Systems</strong><br>
-          <a href="https://suny.buffalostate.edu/" class="textlink">State University of New York, Buffalo State University</a> - Buffalo, NY <br>
-          <em>Completed May 2023</em><br>
-          ● Member of the Muriel A. Howard Honors Program
-        </li>
-        <li>
-          <strong>Advanced Regents High School Diploma</strong><br>
-          <a href="https://www.47aslhs.net/" class="textlink">"47" The American Sign Language & English High School</a> - New York, NY <br>
-          <em>Completed June 2020</em><br>
-          ● Awarded Valedictorian <br>
-          ● Elected Student Body Treasurer (2018) <br>
-          ● Professional development at CUNY Baruch College, John Jay College, and Hunter College.
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Professional Experience Section -->
-  <section id="experience" class="experience-section">
-    <div class="container">
-      <h2>Professional Experience</h2>
-      <ul>
-        <li>
-          <strong>Junior Technical Support Specialist - <a href="https://www.roswellpark.org/" class="textlink-strong">Roswell Park Cancer Institute</a></strong><br>
-          <em>November 2024 - Present</em><br>
-          ● Manage imaging and deployment of devices with Windows 11 to ensure system readiness and user productivity.<br>
-          ● Install, configure, and troubleshoot software issues, and troubleshoot data loss and device upgrade issues.
-        </li>
-        <li>
-          <strong>Dynamify Consultant - <a href="https://us.sodexo.com/" class="textlink-strong">Sodexo</a></strong><br>
-          <em>October 2023 - September 2024</em><br>
-          ● Managed integration of outdated point-of-sales software into advanced POS software, enhancing efficiency.<br>
-          ● Optimized CSV files for accurate stored data, facilitating efficient menu management by replacing outdated items.
-        </li>
-        <li>
-          <strong>Information Technology Help Desk Support - <a href="https://suny.buffalostate.edu/" class="textlink-strong">SUNY Buffalo State University</a></strong><br>
-          <em>October 2022 - June 2023</em><br>
-          ● Troubleshot technical issues for faculty and staff.<br>
-          ● Used Banner Admin & Active Directory to verify student, faculty, and staff affiliation & account information.
-        </li>
-        <li>
-          <strong>Computer Information Systems Teaching Assistant, CIS 375 & 400 - <a href="https://suny.buffalostate.edu/" class="textlink-strong">SUNY Buffalo State University</a></strong><br>
-          <em>January 2023 - May 2023</em><br>
-          ● Assisted students with in-class assignments and projects.<br>
-          ● Demonstrated coding examples and homework assignments for the class.
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="projects-section">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <!-- Project 1: CIS 375 Website -->
-        <div class="project-item">
-          <div class="project-header">
-            <h3>CIS 375: Personal Website</h3>
-            <span class="project-date">Spring 2022</span>
-          </div>
-          <div class="project-content">
-            <p>
-              Built a personal website with HTML, CSS, and JavaScript. The site included a homepage, contact page, and a
-              page displaying personal poems. This project helped build a solid foundation in front-end web development.
-            </p>
-          </div>
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2>About Me</h2>
+        <p id="summary">
+          I am a <strong>Technical Support Specialist & Software Engineer</strong> with a passion for technology,
+          problem-solving and continuous growth.
+          My interest in technology began with my love for DC shows like <em>The Flash</em> and <em>Arrow</em>, Marvel
+          movies like <em>Iron Man</em> and
+          <em>Black Panther</em>, and investigative series like <em>Criminal Minds</em> and <em>NCIS</em>, while
+          hands-on experience sparked my
+          enthusiasm for <strong>web development and design</strong> as well as <strong>tech support</strong>. I enjoy
+          creating functional, visually
+          appealing web pages and aim to combine my skills in <strong>data analytics, cybersecurity, web development,
+            and technical support</strong> to
+          solve real-world challenges and continue expanding my knowledge in these fields.
+        </p>
+        <div id="fullText" style="display: none;">
+          <p>
+            I am a <strong>Technical Support Specialist & Software Engineer</strong> based in Buffalo, NY, with a
+            passion
+            for technology and a lifelong curiosity about how things work and how they can be improved. My interest in
+            technology stems from
+            my love for DC shows and Marvel movies, as well as my fascination with shows like Criminal Minds. That
+            deepened my intrigue in cybersecurity
+            and data analytics. I am also deeply interested in quantum physics and artificial intelligence and plan to
+            expand my knowledge in
+            all these subjects.
+          </p>
+          <br>
+          <p>
+            In addition to analytics and security, I have experience as a web developer and designer. Designing and
+            structuring web pages is
+            something I truly enjoy, as it allows me to combine creativity with functionality. I believe that while a
+            visually appealing design
+            captures attention, functionality is equally—if not more—important to the user experience. My interest in
+            web development began during
+            my undergraduate studies, where I gained hands-on experience in multiple courses. Since then, building
+            interactive and efficient web
+            pages has become a rewarding outlet for both my creative and technical skills.
+          </p>
+          <br>
+          <p>
+            Although a majority of my technical work experience is in technical support, I would love to expand my skill
+            and knowledge in my other
+            technological interests. My background in tech support has given me a strong foundation in troubleshooting,
+            communication, and
+            understanding user needs. Those are arguably skills that are invaluable across every area of technology. My
+            time in support has allowed me
+            to strengthen my problem-solving abilities, gain a deep understanding of IT infrastructure, and develop an
+            analytical mindset that I plan to
+            apply to my work in software engineering and cybersecurity. Moving forward, I aim to continue expanding my
+            expertise in these areas by
+            contributing to projects that merge creativity with technical precision, whether that’s designing smarter
+            web applications, building web
+            development templates, or enhancing digital security solutions. I see every opportunity as a chance to
+            bridge the gap between user experience
+            and innovation, and I’m committed to evolving as both a learner and a worker in the ever-growing tech
+            landscape.
+          </p>
+          <br>
+          <p>
+            Beyond technology, I am a content creator on social media, where I share lifestyle, beauty, and fitness
+            content. Occasionally, I post about
+            food, movies, and TV shows, giving my audience a glimpse into different aspects of my life. I also have a
+            strong love for the arts. Singing,
+            acting, dancing, and theater have been significant parts of my life. I was actively involved in my middle
+            school's theater club for all three
+            years and participated in every talent show throughout middle school and high school. One of my most
+            memorable experiences was being part of a
+            summer program at Lincoln Center, where I auditioned and was accepted into the vocal music track. Though I
+            had to choose between a math
+            competition and pursuing music, it was a gamble that paid off, and I cherished the opportunity to hone my
+            craft. As a student athlete, I
+            competed in track and field during middle school and later participated in archery and stunt (cheerleading
+            without the dancing) in high school.
+          </p>
+          <br>
+          <p>
+            These activities taught me discipline, teamwork, and perseverance, which I carry with me in everything I do
+            today. I have always been driven to
+            challenge myself academically and explore different fields. Thanks to my father's encouragement, I was set
+            up for success early in high school,
+            taking advantage of CUNY's College Now program. During my high school years, I enrolled in numerous college
+            courses, including business,
+            journalism, media, criminal justice, personal finance, and an introductory computer science course. These
+            experiences allowed me to explore a
+            variety of career paths, and in my final year of high school, I realized that computer science was my true
+            calling. Although the COVID-19
+            pandemic made it difficult to continue my studies due to unreliable internet access, the knowledge I gained
+            solidified my passion for technology.
+            Today, I am focused on building a career that combines my love for technology with my interests in data
+            analytics, cybersecurity, web development,
+            and artificial intelligence.
+          </p>
         </div>
-
-        <!-- Project 2: CIS 400 Concert Ticket Application -->
-        <div class="project-item">
-          <div class="project-header">
-            <h3>CIS 400: Concert Ticket Application</h3>
-            <span class="project-date">Fall 2022</span>
+        <button id="learnMoreBtn" class="btn">Learn More</button>
+      </div>
+    </section>
+    <section id="education" class="education-section">
+      <div class="container">
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <strong>Master of Science: Engineering SCience</strong><br>
+            <a href="https://www.buffalo.edu/" class="textlink">State University of New York, University at Buffalo</a> - Buffalo, NY <br>
+            <em>Expected May 2027</em><br>
+            ● Specialization in Artificial Intelligence
+          </li>
+          <!-- <li>
+            <strong>Master of Science: Cybersecurity</strong><br>
+            <a href="https://www.qu.edu/" class="textlink">Quinnipiac University</a> - Hamden, CT <br>
+            <em>Expected May 2026</em> (On Leave)
+          </li>
+          <li>
+            <strong>Master of Science: Data Science & Analytics</strong><br>
+            <a href="https://suny.buffalostate.edu/" class="textlink">State University of New York, Buffalo State
+              University</a> - Buffalo, NY <br>
+            <em>Expected May 2026</em> (On Leave)
+          </li> -->
+          <li>
+            <strong>Bachelor of Science: Computer Information Systems</strong><br>
+            <a href="https://suny.buffalostate.edu/" class="textlink">State University of New York, Buffalo State
+              University</a> - Buffalo, NY <br>
+            <em>Completed May 2023</em><br>
+            ● Member of the Muriel A. Howard Honors Program
+          </li>
+          <li>
+            <strong>Advanced Regents High School Diploma</strong><br>
+            <a href="https://www.47aslhs.net/" class="textlink">"47" The American Sign Language & English High
+              School</a> - New York, NY <br>
+            <em>Completed June 2020</em><br>
+            ● Awarded Valedictorian <br>
+            ● Elected Student Body Treasurer (2018) <br>
+            ● Professional development at CUNY Baruch College, John Jay College, and Hunter College.
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="experience" class="experience-section">
+      <div class="container">
+        <h2>Professional Experience</h2>
+        <ul>
+          <li>
+            <strong>Junior Technical Support Specialist (Contract) - <a href="https://www.roswellpark.org/"
+                class="textlink-strong">Roswell Park Cancer Institute</a></strong><br>
+            <em>November 2024 - October 2025</em><br>
+            ● Manage imaging and deployment of devices with Windows 11 to ensure system readiness and user
+            productivity.<br>
+            ● Install, configure, and troubleshoot software issues, and troubleshoot data loss and device upgrade
+            issues.
+          </li>
+          <li>
+            <strong>Dynamify Consultant (Contract) - <a href="https://us.sodexo.com/"
+                class="textlink-strong">Sodexo</a></strong><br>
+            <em>October 2023 - September 2024</em><br>
+            ● Managed integration of outdated point-of-sales software into advanced POS software, enhancing
+            efficiency.<br>
+            ● Optimized CSV files for accurate stored data, facilitating efficient menu management by replacing outdated
+            items.
+          </li>
+          <li>
+            <strong>Information Technology Help Desk Support (Internship) - <a href="https://suny.buffalostate.edu/"
+                class="textlink-strong">SUNY Buffalo State University</a></strong><br>
+            <em>October 2022 - June 2023</em><br>
+            ● Troubleshot technical issues for faculty and staff.<br>
+            ● Used Banner Admin & Active Directory to verify student, faculty, and staff affiliation & account
+            information.
+          </li>
+          <li>
+            <strong>Computer Information Systems Teaching Assistant, CIS 375 & 400 (Temporary) - <a
+                href="https://suny.buffalostate.edu/" class="textlink-strong">SUNY Buffalo State
+                University</a></strong><br>
+            <em>January 2023 - May 2023</em><br>
+            ● Assisted students with in-class assignments and projects.<br>
+            ● Demonstrated coding examples and homework assignments for the class.
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <div class="project-item">
+            <div class="project-header">
+              <h3>CIS 375: Personal Website</h3>
+              <span class="project-date">Spring 2022</span>
+            </div>
+            <div class="project-content">
+              <p>
+                Built a personal website with HTML, CSS, and JavaScript. The site included a homepage, contact page, and
+                a
+                page displaying personal poems. This project helped build a solid foundation in front-end web
+                development.
+              </p>
+            </div>
           </div>
-          <div class="project-content">
-            <p>
-              Created a Windows Forms application using VB.NET to manage concert seat reservations. The application used
-              text files to track seat availability and allowed users to book or release seats.
-            </p>
+          <div class="project-item">
+            <div class="project-header">
+              <h3>CIS 400: Concert Ticket Application</h3>
+              <span class="project-date">Fall 2022</span>
+            </div>
+            <div class="project-content">
+              <p>
+                Created a Windows Forms application using VB.NET to manage concert seat reservations. The application
+                used
+                text files to track seat availability and allowed users to book or release seats.
+              </p>
+            </div>
           </div>
-        </div>
-
-        <!-- Project 3: CIS 475 Web Design -->
-        <div class="project-item">
-          <div class="project-header">
-            <h3>CIS 475: Advanced Web Development</h3>
-            <span class="project-date">Spring 2023</span>
-          </div>
-          <div class="project-content">
-            <p>
-              Developed a registration and login system using PHP and MySQL, with password hashing for security. The
-              project also included an admin-only page and downloadable file links. This enhanced my skills in back-end web
-              development and database management.
-            </p>
+          <div class="project-item">
+            <div class="project-header">
+              <h3>CIS 475: Advanced Web Development</h3>
+              <span class="project-date">Spring 2023</span>
+            </div>
+            <div class="project-content">
+              <p>
+                Developed a registration and login system using PHP and MySQL, with password hashing for security. The
+                project also included an admin-only page and downloadable file links. This enhanced my skills in
+                back-end web
+                development and database management.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="skills-section">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-item" data-skill="CSS">CSS</div>
-        <div class="skill-item" data-skill="HTML5">HTML5</div>
-        <div class="skill-item" data-skill="Python">Python</div>
-        <div class="skill-item" data-skill="Tableau">Tableau</div>
-        <div class="skill-item" data-skill="PHP">PHP</div>
-        <div class="skill-item" data-skill="MySQL">MySQL</div>
-        <div class="skill-item" data-skill="VB.NET">VB.NET</div>
-        <div class="skill-item" data-skill="C++">C++</div>
-        <div class="skill-item" data-skill="Java">Java</div>
-        <div class="skill-item" data-skill="JavaScript">JavaScript</div>
-        <div class="skill-item" data-skill="Google Suite">Google Suite</div>
-        <div class="skill-item" data-skill="Office 365">Office 365</div>
+    </section>
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-item" data-skill="CSS">CSS</div>
+          <div class="skill-item" data-skill="HTML5">HTML5</div>
+          <div class="skill-item" data-skill="Python">Python</div>
+          <div class="skill-item" data-skill="Tableau">Tableau</div>
+          <div class="skill-item" data-skill="PHP">PHP</div>
+          <div class="skill-item" data-skill="MySQL">MySQL</div>
+          <div class="skill-item" data-skill="VB.NET">VB.NET</div>
+          <div class="skill-item" data-skill="C++">C++</div>
+          <div class="skill-item" data-skill="Java">Java</div>
+          <div class="skill-item" data-skill="JavaScript">JavaScript</div>
+          <div class="skill-item" data-skill="Google Suite">Google Suite</div>
+          <div class="skill-item" data-skill="Office 365">Office 365</div>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-<section id="contact" class="contact-section">
-  <div class="container">
-    <h2>Contact Me</h2>
-    <p>
-      <img src="email_icon.png" alt="Email Icon" class="contact-icon">
-      <a href="mailto:melissa.appenteng@gmail.com">melissa.appenteng@gmail.com</a>
-    </p>
-    <p>
-      <img src="linkedin_icon.png" alt="LinkedIn Icon" class="contact-icon">
-      <a href="https://LinkedIn.com/in/MAppenteng" target="_blank">linkedin.com/in/mappenteng</a>
-    </p>
-    <p>
-      <img src="github_icon.png" alt="GitHub Icon" class="contact-icon">
-      <a href="https://github.com/M-Appenteng" target="_blank">github.com/M-Appenteng</a>
-    </p>
-  </div>
-</section>
-
-  <!-- Footer -->
+    </section>
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>
+          <img src="email_icon.png" alt="Email Icon" class="contact-icon">
+          <a href="mailto:melissa.appenteng@gmail.com">melissa.appenteng@gmail.com</a>
+        </p>
+        <p>
+          <img src="linkedin_icon.png" alt="LinkedIn Icon" class="contact-icon">
+          <a href="https://LinkedIn.com/in/MAppenteng" target="_blank">linkedin.com/in/mappenteng</a>
+        </p>
+        <p>
+          <img src="github_icon.png" alt="GitHub Icon" class="contact-icon">
+          <a href="https://github.com/M-Appenteng" target="_blank">github.com/M-Appenteng</a>
+        </p>
+      </div>
+    </section>
+  </main>
   <footer>
     <div class="container">
       <p>&copy; 2024 Melissa Appenteng</p>
     </div>
   </footer>
-
-  <!-- Skill Modal -->
   <div id="skillModal" class="modal">
     <div class="modal-content">
       <span class="close-btn">&times;</span>
@@ -280,7 +315,6 @@
       <p id="skillDescription"></p>
     </div>
   </div>
-
   <script src="script.js"></script>
 </body>
 
