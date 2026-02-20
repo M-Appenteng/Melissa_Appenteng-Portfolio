@@ -281,15 +281,12 @@ h2 {
 }
 
 .modal-content {
-  background-color: #fff;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less */
-  max-width: 600px; /* Responsive max-width */
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
-  position: relative;
+  width: 300px;            /* square size */
+  height: 300px;           /* same as width */
+  object-fit: cover;       /* prevents stretching */
+  border-radius: 10px;     /* optional soft corners */
+  display: block;
+  margin: 10% auto;
 }
 
 .modal-content h3,
