@@ -383,7 +383,6 @@ footer p {
     flex-direction: column;
     width: 100%;
     position: absolute;
-    top: 60px; /* Adjust based on navbar height
     top: 60px; /* Adjust based on navbar height */
     left: 0;
     background-color: #102542;
