@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const skillName = item.getAttribute('data-skill');
         skillTitle.textContent = skillName;
         skillDescription.textContent = getSkillDescription(skillName);
-        skillModal.style.display = 'block';
+        skillModal.style.display = 'flex';
         document.body.classList.add('no-scroll');
       });
     });
