@@ -7,8 +7,8 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #CDD7D6;
-  color: #102542;
+  background-color: #FFF8FA;
+  color: #2E2E38;
   line-height: 1.6;
 }
 
@@ -20,7 +20,7 @@ body {
 
 /* Navigation Bar */
 .navbar {
-  background-color: #102542;
+  background-color: #9A9AD9;
   padding: 15px 0;
   position: fixed;
   width: 100%;
@@ -37,7 +37,7 @@ body {
 
 .navbar .logo {
   font-size: 24px;
-  color: #FFFFFF;
+  color: #FDFBFF;
   text-decoration: none;
   font-weight: bold;
 }
@@ -53,26 +53,26 @@ body {
 
 .navbar .nav-links a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #FDFBFF;
   font-size: 18px;
   transition: color 0.3s;
 }
 
 .navbar .nav-links a:hover {
-  color: #F87060;
+  color: #B99AD9;
 }
 
 .navbar .menu-toggle {
   display: none; /* Hide by default */
   font-size: 24px;
-  color: #FFFFFF;
+  color: #FDFBFF;
   cursor: pointer;
 }
 
 /* Hero Section */
 .hero-section {
-  background-color: #102542;
-  color: #FFFFFF;
+  background-color: #9A9AD9;
+  color: #FDFBFF;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -86,7 +86,7 @@ body {
 }
 
 .hero-section h1 span {
-  color: #F87060;
+  color: #C59AD9;
 }
 
 .hero-section p {
@@ -95,8 +95,8 @@ body {
 }
 
 .hero-section .btn {
-  background-color: #F87060;
-  color: #FFFFFF;
+  background-color: #B99AD9;
+  color: #FDFBFF;
   padding: 12px 25px;
   margin-top: 20px;
   border-radius: 5px;
@@ -106,7 +106,7 @@ body {
 }
 
 .hero-section .btn:hover {
-  background-color: #B3A394;
+  background-color: #D9B99A;
 }
 
 /* Section Styles */
@@ -118,7 +118,7 @@ h2 {
   text-align: center;
   margin-bottom: 50px;
   font-size: 36px;
-  color: #102542;
+  color: #2E2E38;
 }
 
 /* About Section */
@@ -127,7 +127,7 @@ h2 {
   font-size: 18px;
   max-width: 800px;
   margin: 0 auto;
-  color: #102542;
+  color: #2E2E38;
 }
 
 /* Education Section */
@@ -139,21 +139,21 @@ h2 {
 .education-section ul li,
 .experience-section ul li {
   padding: 20px;
-  background-color: #FFFFFF;
+  background-color: #FDFBFF;
   margin-bottom: 15px;
-  border-left: 5px solid #F87060;
+  border-left: 5px solid #B99AD9;
 }
 
 .education-section ul li strong,
 .experience-section ul li strong {
   font-size: 18px;
-  color: #102542;
+  color: #2E2E38;
 }
 
 .education-section ul li em,
 .experience-section ul li em {
   font-size: 14px;
-  color: #B3A394;
+  color: #D9B99A;
 }
 
 /* Projects Section */
@@ -242,10 +242,10 @@ h2 {
 }
 
 .skill-item {
-  background-color: #FFFFFF;
+  background-color: #FDFBFF;
   padding: 20px;
   border-radius: 5px;
-  border-left: 5px solid #F87060;
+  border-left: 5px solid #B99AD9;
   flex: 1 1 calc(100% / 7 - 20px); /* Adjust based on max 7 skills per line */
   text-align: center;
   max-width: calc(100% / 7 - 20px); /* Ensure maximum width per skill item */
@@ -254,13 +254,13 @@ h2 {
 }
 
 .skill-item:hover {
-  background-color: #F87060; /* Change background color on hover */
-  color: #FFFFFF; /* Change text color on hover */
+  background-color: #B99AD9; /* Change background color on hover */
+  color: #FDFBFF; /* Change text color on hover */
   transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 .skill-item h3 {
-  color: #102542;
+  color: #2E2E38;
   font-weight: bold;
 }
 
@@ -334,13 +334,13 @@ h2 {
 
 /* Contact Section */
 .contact-section {
-  background-color: #102542;
-  color: #FFFFFF;
+  background-color: #9A9AD9;
+  color: #FDFBFF;
   text-align: center;
 }
 
 .contact-section h2 {
-  color: #F87060;
+  color: #B99AD9;
 }
 
 .contact-section p {
@@ -348,7 +348,7 @@ h2 {
 }
 
 .contact-section a {
-  color: #F87060;
+  color: #B99AD9;
   text-decoration: none;
   font-size: 18px;
 }
@@ -367,8 +367,8 @@ h2 {
 /* Footer */
 footer {
   text-align: center;
-  background-color: #102542;
-  color: #FFFFFF;
+  background-color: #9A9AD9;
+  color: #FDFBFF;
   padding: 20px;
 }
 
@@ -385,7 +385,7 @@ footer p {
     position: absolute;
     top: 60px; /* Adjust based on navbar height */
     left: 0;
-    background-color: #102542;
+    background-color: #9A9AD9;
   }
 
   .navbar .nav-links.active {
@@ -408,8 +408,8 @@ footer p {
 
 /* Button styles */
 .btn {
-  background-color: #F87060; /* Background color for buttons */
-  color: #FFFFFF;
+  background-color: #B99AD9; /* Background color for buttons */
+  color: #FDFBFF;
   padding: 12px 25px;
   border-radius: 5px;
   text-decoration: none;
@@ -420,14 +420,14 @@ footer p {
 }
 
 .btn:hover {
-  background-color: #B3A394; /* Hover state for buttons */
+  background-color: #D9B99A; /* Hover state for buttons */
 }
 
 /* Learn More button styles */
 #learnMoreBtn {
   background: none;
   border: none;
-  color: #F87060; /* Matches the background color of buttons */
+  color: #B99AD9; /* Matches the background color of buttons */
   font-size: 0.75em; /* 0.75x the size of the paragraph above */
   cursor: pointer;
   text-decoration: none; /* Removes the underline */
@@ -437,7 +437,7 @@ footer p {
 }
 
 #learnMoreBtn:hover {
-  color: #B3A394; /* Changes color on hover */
+  color: #D9B99A; /* Changes color on hover */
 }
 
 /* Same hover color for Melissa as "View My Work" */
@@ -448,7 +448,7 @@ footer p {
 }
 
 .hover-text:hover {
-  color: #B3A394; /* Replace with your "View My Work" button's hover color */
+  color: #D9B99A; /* Replace with your "View My Work" button's hover color */
   text-decoration: underline;
 }
 
